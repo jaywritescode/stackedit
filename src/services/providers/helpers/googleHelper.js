@@ -1,3 +1,4 @@
+
 import utils from '../../utils';
 import networkSvc from '../../networkSvc';
 import store from '../../../store';
@@ -8,10 +9,10 @@ const appsDomain = null;
 const tokenExpirationMargin = 5 * 60 * 1000; // 5 min (tokens expire after 1h)
 
 const driveAppDataScopes = ['https://www.googleapis.com/auth/drive.appdata'];
-const getDriveScopes = token => [token.driveFullAccess
-  ? 'https://www.googleapis.com/auth/drive'
-  : 'https://www.googleapis.com/auth/drive.file',
-'https://www.googleapis.com/auth/drive.install'];
+const getDriveScopes = token => [
+  'https://www.googleapis.com/auth/drive.file',
+  'https://www.googleapis.com/auth/drive.install'
+];
 const bloggerScopes = ['https://www.googleapis.com/auth/blogger'];
 const photosScopes = ['https://www.googleapis.com/auth/photos'];
 
